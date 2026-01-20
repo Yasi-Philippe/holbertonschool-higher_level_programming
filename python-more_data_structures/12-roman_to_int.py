@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if type(roman_string) is not str or not roman_string:
+        return 0
     my_dict = {"I": 1,
                "V": 5,
                "X": 10,
