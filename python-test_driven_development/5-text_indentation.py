@@ -18,4 +18,4 @@ def text_indentation(text):
         if character not in (".", "?", ":"):
             print(character, end="")
         else:
-            print("{}\n\n".format(character))
+            print("{}\n".format(character))
