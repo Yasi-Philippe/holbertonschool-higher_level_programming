@@ -11,6 +11,8 @@ def add_integer(a, b=98):
     :param b: Second integer to sum
     """
     try:
+        if a != a:
+            raise TypeError("a must be an integer")
         if a is None:
             raise TypeError("a must be an integer")
         if type(a) is not int and type(a) is not float:
@@ -22,3 +24,5 @@ def add_integer(a, b=98):
         return a + b
     except SyntaxError:
         raise SyntaxError
+    except ValueError:
+        raise ValueError
