@@ -11,6 +11,7 @@ def matrix_divided(matrix, div):
     :param div: Divisor input
     """
 
+    err_msg = ("matrix must be a matrix (list of lists) of integers/floats")
     if type(div) not in (int, float):
         raise TypeError("div must be a number")
     if div == 0:
@@ -23,8 +24,7 @@ def matrix_divided(matrix, div):
         part_matrix = []
         for j in i:
             if type(j) not in (int, float):
-                raise TypeError("matrix must be a matrix \
-                                (list of lists) of integers/floats")
+                raise TypeError(err_msg)
             part_matrix.append(round(j / div, 2))
         new_matrix.append(part_matrix)
     return new_matrix
