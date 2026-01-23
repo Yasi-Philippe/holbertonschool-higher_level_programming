@@ -23,7 +23,8 @@ def matrix_divided(matrix, div):
         part_matrix = []
         for j in i:
             if type(j) not in (int, float):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix \
+                                (list of lists) of integers/floats")
             part_matrix.append(round(j / div, 2))
         new_matrix.append(part_matrix)
     return new_matrix
