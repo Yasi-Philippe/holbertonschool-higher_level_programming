@@ -61,6 +61,8 @@ class Rectangle:
         """Prints a rectangle"""
         my_str = ""
         if self.__width != 0 and self.__height != 0:
-            for _ in range(self.__height):
-                my_str += self.__width * "#" + "\n"
+            for i in range(self.__height):
+                my_str += self.__width * "#"
+                if i != self.__height - 1:
+                    my_str += "\n"
         return my_str
