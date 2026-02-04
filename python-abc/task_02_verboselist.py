@@ -24,5 +24,6 @@ class VerboseList(list):
         try:
             value_removed = super().pop(index)
             print("Popped [{}] from the list.".format(value_removed))
+            return value_removed
         except IndexError:
             value_removed = super().pop(index)
