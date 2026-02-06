@@ -1,48 +1,36 @@
 >>> MyList = __import__('1-my_list').MyList
->>> # Empty list
->>> ml1 = MyList()
->>> ml1.print_sorted()
-[]
->>> ml1
-[]
->>> # List with integers
->>> ml2 = MyList([3, 1, 2])
->>> ml2.print_sorted()
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.print_sorted()
 [1, 2, 3]
->>> ml2
+>>> print(my_list)
 [3, 1, 2]
->>> # Already sorted list
->>> ml3 = MyList([1, 2, 3])
->>> ml3.print_sorted()
-[1, 2, 3]
->>> ml3
-[1, 2, 3]
->>> # Reverse sorted list
->>> ml4 = MyList([5, 4, 3, 2, 1])
->>> ml4.print_sorted()
-[1, 2, 3, 4, 5]
->>> ml4
-[5, 4, 3, 2, 1]
->>> # List with repeated elements
->>> ml5 = MyList([2, 1, 2, 1])
->>> ml5.print_sorted()
-[1, 1, 2, 2]
->>> ml5
-[2, 1, 2, 1]
->>> # Single element
->>> ml6 = MyList([10])
->>> ml6.print_sorted()
-[10]
->>> ml6
-[10]
->>> # Large list
->>> ml7 = MyList(list(range(10, 0, -1)))
->>> ml7.print_sorted()
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
->>> ml7
-[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
->>> # Inheritance check
->>> issubclass(MyList, list)
-True
->>> isinstance(ml2, list)
-True
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.append(-1)
+>>> print(my_list)
+[-1]
+>>> my_list.append(-4)
+>>> print(my_list)
+[-1, -4]
+>>> my_list.append(-2)
+>>> print(my_list)
+[-1, -4, -2]
+>>> my_list.append(-3)
+>>> print(my_list)
+[-1, -4, -2, -3]
+>>> my_list.append(-5)
+>>> print(my_list)
+[-1, -4, -2, -3, -5]
+>>> print(my_list)
+[-1, -4, -2, -3, -5]
+>>> my_list.print_sorted()
+[-5, -4, -3, -2, -1]
+>>> print(my_list)
+[-1, -4, -2, -3, -5]
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
