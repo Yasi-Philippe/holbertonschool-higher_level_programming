@@ -7,7 +7,8 @@ specified class or a precedent class
 
 def inherits_from(obj, a_class):
     """
-    Function that shows whether if an object is an instance of a specified class
+    Function that shows whether if an object is
+    an instance of a specified class
     Return: Boolean
     """
     if isinstance(obj, a_class) and type(obj) is not a_class:
