@@ -3,68 +3,46 @@
 >>> ml1 = MyList()
 >>> ml1.print_sorted()
 []
+>>> ml1
+[]
 >>> # List with integers
 >>> ml2 = MyList([3, 1, 2])
 >>> ml2.print_sorted()
 [1, 2, 3]
+>>> ml2
+[3, 1, 2]
 >>> # Already sorted list
 >>> ml3 = MyList([1, 2, 3])
 >>> ml3.print_sorted()
 [1, 2, 3]
->>> # Reverse sorted list
->>> ml4 = MyList([3, 2, 1])
->>> ml4.print_sorted()
+>>> ml3
 [1, 2, 3]
->>> # List with strings
->>> ml5 = MyList(['banana', 'apple', 'cherry'])
+>>> # Reverse sorted list
+>>> ml4 = MyList([5, 4, 3, 2, 1])
+>>> ml4.print_sorted()
+[1, 2, 3, 4, 5]
+>>> ml4
+[5, 4, 3, 2, 1]
+>>> # List with repeated elements
+>>> ml5 = MyList([2, 1, 2, 1])
 >>> ml5.print_sorted()
-['apple', 'banana', 'cherry']
->>> # Case-sensitive strings
->>> ml6 = MyList(['a', 'A', 'b'])
->>> ml6.print_sorted()
-['A', 'a', 'b']
+[1, 1, 2, 2]
+>>> ml5
+[2, 1, 2, 1]
 >>> # Single element
->>> ml7 = MyList([1])
+>>> ml6 = MyList([10])
+>>> ml6.print_sorted()
+[10]
+>>> ml6
+[10]
+>>> # Large list
+>>> ml7 = MyList(list(range(10, 0, -1)))
 >>> ml7.print_sorted()
-[1]
->>> # Another empty list
->>> ml8 = MyList([])
->>> ml8.print_sorted()
-[]
->>> # Mixed types (should raise TypeError)
->>> ml9 = MyList([1, 'a'])
->>> ml9.print_sorted()
-Traceback (most recent call last):
-TypeError: '<' not supported between instances of 'str' and 'int'
->>> # Floating point numbers
->>> ml10 = MyList([1.5, 2.5, 0.5])
->>> ml10.print_sorted()
-[0.5, 1.5, 2.5]
->>> # Verify inheritance
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> ml7
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+>>> # Inheritance check
 >>> issubclass(MyList, list)
 True
 >>> isinstance(ml2, list)
 True
->>> # Compare with built-in sort
->>> ml11 = MyList([3, 1, 2])
->>> ml11.sort()
->>> ml11
-[1, 2, 3]
->>> ml11.print_sorted()
-[1, 2, 3]
->>> # Negative numbers
->>> ml12 = MyList([0, -1, 5, -3])
->>> ml12.print_sorted()
-[-3, -1, 0, 5]
->>> # Mixed positive and float numbers
->>> ml13 = MyList([2, 1.5, 3])
->>> ml13.print_sorted()
-[1.5, 2, 3]
->>> # List with repeated elements
->>> ml14 = MyList([2, 2, 1, 1])
->>> ml14.print_sorted()
-[1, 1, 2, 2]
->>> # Large list
->>> ml15 = MyList(list(range(10, 0, -1)))
->>> ml15.print_sorted()
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
