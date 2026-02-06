@@ -1,4 +1,4 @@
->>> My_List = __import__('1-my_list').My_List
+>>> MyList = __import__('1-my_list').MyList
 >>> # Empty list
 >>> ml1 = MyList()
 >>> ml1.print_sorted()
