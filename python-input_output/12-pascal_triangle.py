@@ -12,7 +12,7 @@ def pascal_triangle(n):
         return []
     whole_list = [[1]]
     list_pre = [1]
-    for i in range(n):
+    for i in range(n - 1):
         new_list = [1]
         for j in range(i):
             new_list.append(list_pre[j] + list_pre[j + 1])
