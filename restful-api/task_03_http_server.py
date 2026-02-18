@@ -22,7 +22,7 @@ class my_server_handler(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write("OK".encode("UTF-8"))
+            self.wfile.write("OK".encode("utf-8"))
         elif self.path == "/":
             message = "Hello, this is a simple API!"
             self.send_response(200)
@@ -40,7 +40,7 @@ class my_server_handler(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write("Error 404. We did not find this place :(")
+            self.wfile.write("Endpoint not found")
 
 
 PORT = 8000
