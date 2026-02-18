@@ -15,14 +15,18 @@ def fetch_and_print_posts():
         for i in my_json_object:
             print(i.get("title"))
 
+
 def fetch_and_save_posts():
     """Function that fetches posts and saves them"""
     r = requests.get("https://jsonplaceholder.typicode.com/posts")
     if r.status_code == 200:
         my_json_object = r.json()
-        my_dict = {"id", "title", "body"}
+        my_dict = {"id" : None, "title" : None, "body" : None}
         for i in my_json_object:
             for key, value in i.items():
                 if key in my_dict:
                     my_dict[key] = value
         with open("posts.csv", "w", encoding="UTF-8") as my_file:
+            csv.DictWriter(my_file, my_dict.keys())
+
+fetch_and_save_posts()
