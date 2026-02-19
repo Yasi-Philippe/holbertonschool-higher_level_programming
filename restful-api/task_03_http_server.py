@@ -7,7 +7,7 @@ import socketserver
 import json
 
 
-class my_server_handler(http.server.BaseHTTPRequestHandler):
+class MyServerHandler(http.server.BaseHTTPRequestHandler):
     """A class to handle the server"""
     def do_GET(self):
         """Function to handle GET requests"""
@@ -40,10 +40,10 @@ class my_server_handler(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write("Endpoint not found")
+            self.wfile.write("Endpoint not found".encode("utf-8"))
 
 
 PORT = 8000
-with socketserver.TCPServer(("localhost", PORT), my_server_handler) as httpd:
+with socketserver.TCPServer(("", PORT), MyServerHandler) as httpd:
     print("Server running on http://localhost:8000")
     httpd.serve_forever()
