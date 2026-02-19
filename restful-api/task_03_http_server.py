@@ -45,4 +45,5 @@ class my_server_handler(http.server.BaseHTTPRequestHandler):
 
 PORT = 8000
 with socketserver.TCPServer(("localhost", PORT), my_server_handler) as httpd:
+    print("Server running on http://localhost:8000")
     httpd.serve_forever()
