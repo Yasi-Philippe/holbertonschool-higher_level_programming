@@ -29,7 +29,7 @@ def fetch_and_save_posts():
                     my_dict[key] = value
             new_list_of_posts.append(my_dict)
         with open("posts.csv", "w", encoding="UTF-8") as my_file:
-            writer = csv.DictWriter(my_file, my_dict.keys())
+            writer = csv.DictWriter(my_file, fieldnames=my_dict.keys())
             writer.writeheader()
             for row in new_list_of_posts:
                 writer.writerow(row)
